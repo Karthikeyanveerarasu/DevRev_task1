@@ -1,0 +1,61 @@
+.card-img-top {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+.book_card:hover {
+  box-shadow: 5px 15px 20px 1px rgba(0, 0, 0, 0.553) !important;
+}
+
+.line {
+  height: 3px;
+  background-color: blueviolet;
+  width: 130px;
+  margin: auto;
+}
+.search_box {
+  width: 60%;
+  margin: auto;
+}
+.recom_text {
+  text-transform: uppercase;
+  text-align: center;
+}
+.book_card {
+  overflow: hidden;
+}
+.load-more {
+  background-color: #000;
+  color: #fff !important;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 50px 0;
+  display: inline-block;
+}
+
+.load-more:hover {
+  background-color: blue;
+  text-decoration: none;
+}
+.header_content {
+  min-height: 75px;
+  height: 300px;
+  background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)),
+    url("https://c1.wallpaperflare.com/preview/289/102/403/various-book-books-college.jpg")
+      center/cover no-repeat;
+}
+.header_title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.6rem;
+}
+.header_text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.4rem;
+}
+.blockquote-footer {
+  color: white;
+  letter-spacing: 1px;
+}
