@@ -4,7 +4,12 @@
   position: relative;
   font-family: PT;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
 .hover-underline-animation:after {
   content: "";
   position: absolute;
