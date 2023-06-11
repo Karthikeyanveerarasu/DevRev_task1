@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import "./Book.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProgressBar from "react-scroll-progress-bar";
-
 const BookList = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [books, setBooks] = useState([]);
@@ -12,22 +11,13 @@ const BookList = () => {
   const [loading, setLoading] = useState(false);
   const [filterType, setFilterType] = useState("");
   const [sortType, setSortType] = useState("");
+  const[notify,Setnotify]=useState(false);
   useEffect(() => {
     loadBooks();
   }, []);
 
-  const handleCart = (book) => {
-    toast.success("Added to cart", {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored"
-    });
-
+  const handleaddtocartCart = (book) => {
+  alert("product added to cart");
     const cartBook = {
       id: book.id,
       title: book.volumeInfo.title,
@@ -43,7 +33,6 @@ const BookList = () => {
     window.dispatchEvent(new Event("cartUpdated"));
     console.log(localStorage.getItem("authur"));
 
-    // Disable the button for the added book
   };
 
   const loadBooks = async () => {
@@ -259,7 +248,7 @@ const BookList = () => {
                   <button
                     disabled={book.saleInfo.saleability !== "FOR_SALE"}
                     className="btn btn-primary"
-                    onClick={() => handleCart(book)}
+                    onClick={() => handleaddtocartCart(book)}
                   >
                     Add to Cart
                   </button>
