@@ -50,6 +50,9 @@ const BookList = () => {
       if (startIndex > 0) {
         url += `&startIndex=${startIndex}`;
       }
+       if (filterType !== "") {
+      url += `&orderBy=${encodeURIComponent(filterType)}`;
+    }
 
       const response = await fetch(url);
 
